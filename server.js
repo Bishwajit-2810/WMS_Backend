@@ -84,7 +84,7 @@ app.get("/api/data/latest", async (req, res) => {
 app.post('/api/content', async (req, res) => {
     try {
         const prompt = req.body.prompt
-        const result = await generate(prompt + "in short and in points")
+        const result = await generate(prompt)
         res.status(200).json({ "result": result }); // Ensure JSON response
 
 
