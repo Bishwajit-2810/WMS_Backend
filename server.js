@@ -61,7 +61,7 @@ app.post("/api/data", async (req, res) => {
 // API Endpoint to fetch all data
 app.get("/api/data", async (req, res) => {
     try {
-        const allData = await LoRaData.find().sort({ timestamp: -1 }).limit(10);
+        const allData = await LoRaData.find().sort({ timestamp: -1 });
         res.status(200).json(allData);
     } catch (error) {
         console.error("❌ Error fetching data:", error);
